@@ -22,12 +22,12 @@ const cartesian =
 
 let columnToPatterns = column => {
 
-    //  Possible patterns of the current question
-    let patterns = [];
+    //  Possible answers of the current question
+    let answers = [];
     for(let question in column) 
-        patterns.push( column[question] );
+        answers.push( column[question] );
 
-    return cartesian(...patterns).map( pattern => pattern.join('') )
+    return cartesian(...answers).map( pattern => pattern.join('') )
 }
 
 
