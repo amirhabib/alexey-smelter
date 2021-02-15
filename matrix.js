@@ -1,16 +1,18 @@
 /**
- * CONFLICT MINIRAL CMRT MATRIX
+ *  CONFLICT MINIRAL CMRT MATRIX
  * 
- * Possible Statuses:
- * ------------------
+ *  Possible Statuses:
+ *  ------------------
  * 
- *          Y    = YES
- *          N    = NO
- *          NA   = NOT APPLICABLE
- *          UK   = UNKNOWN
- *          PA   = PARTIAL
+ *     Y    = YES
+ *     N    = NO
+ *     NA   = NOT APPLICABLE
+ *     UK   = UNKNOWN
+ *     PA   = PARTIAL
+ * 
  */
-module.exports = {
+
+const matrix = {
     'free': [
         {
             q1: ['Y', 'NA'],
@@ -264,3 +266,5 @@ module.exports = {
         },
     ],
 }
+
+module.exports = matrix;
