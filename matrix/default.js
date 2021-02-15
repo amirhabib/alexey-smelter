@@ -267,4 +267,4 @@ const matrix = {
     ],
 }
 
-module.exports = matrix;
+export default matrix;

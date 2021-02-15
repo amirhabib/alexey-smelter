@@ -1,5 +1,5 @@
-const matrix = require('./matrix');
-const { columnToPatterns, saveToJSON } = require('./helpers');
+import matrix from './matrix/default.js';
+import helpers from './helpers/default.js';
 
 console.log('Generating matrix...');
 
@@ -9,7 +9,9 @@ const allPatternsAndStatuses = {};
 //  Loop through status in matrix and create possible patterns for each status
 for(let status in matrix) 
     for(let column of matrix[status]) 
-        columnToPatterns(column).forEach( pattern =>  allPatternsAndStatuses[pattern] = status );
+        helpers.mapPatterns(column).forEach( pattern =>  allPatternsAndStatuses[pattern] = status );
 
 //  Export Data to a file
-saveToJSON('./patterns.json', allPatternsAndStatuses);
+helpers.saveToJSON('./patterns.json', allPatternsAndStatuses);
+
+export default { }
