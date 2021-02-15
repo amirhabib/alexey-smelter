@@ -13,5 +13,3 @@ for(let status in matrix)
 
 //  Export Data to a file
 helpers.saveToJSON('./patterns.json', allPatternsAndStatuses);
-
-export default { }
