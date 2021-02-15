@@ -16,16 +16,16 @@ const cartesian =
 
 /**
  *  --------------------------------------------------------------------
- *    Cominate all possible answers into severa variations
+ *    Combine all possible answers into several variations
  *  -------------------------------------------------------------------- 
  * */  
 
-let columnToPatterns = option => {
+let columnToPatterns = column => {
 
     //  Possible patterns of the current question
     let patterns = [];
-    for(let question in option) 
-        patterns.push( option[question] );
+    for(let question in column) 
+        patterns.push( column[question] );
 
     return cartesian(...patterns).map( pattern => pattern.join('') )
 }
